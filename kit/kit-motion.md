@@ -14,6 +14,17 @@
 6. **Nunca texto pequeno.** No celular, nada que precisa ser lido fica abaixo de 40 px reais.
 7. **Sem sorteio.** Tudo que parece aleatório usa uma função com semente (seção 9), para o vídeo sair igual toda vez.
 
+## 0b. Contenção: efeito só onde ele ajuda (regra do Ivan, 18/10/2026)
+O kit tem muitos efeitos, e **nenhum vídeo usa todos**. Cada efeito precisa de um motivo; no vídeo do canal o excesso atrapalha a leitura. Regras:
+1. **Um foco por cena:** no máximo UM efeito de destaque ativo por vez (brilho forte, flare, partículas densas, glitch, texto 3D). O resto da cena fica calmo.
+2. **Onde o efeito vale:** gancho (0 a 3 s), a palavra-chave do ponto central, a revelação do resultado, a virada entre blocos e o fecho. **Cenas de leitura** (pedido, resumo, lista, prova, aviso) têm fundo calmo: sem partículas, sem grade animada, sem painel técnico atrás do texto.
+3. **Fundo atrás de texto:** no máximo 12 partículas, sem passar por cima do texto; nenhum rótulo técnico ou número de fundo competindo com o que deve ser lido. O texto manda: nítido, grande e com contraste.
+4. **Sem relógio nem numeração de cena nos vídeos do canal:** a barra de progresso no topo já mostra o andamento. Contador de tempo (GRAV/REC), "cena NN/NN" e rótulos de estúdio ficam só na vitrine de efeitos ("Poder do Motion").
+5. **Densidade:** no máximo 3 camadas ao mesmo tempo (fundo + texto + 1 elemento) e pelo menos 60% da tela livre em cena de leitura.
+6. **Transições:** variar, mas transição de impacto só nas viradas (no máximo 1 a cada 6 a 8 s). Entre cenas de leitura, corte simples ou fade curto.
+7. **Teste de legibilidade antes de entregar:** pause em 5 quadros ao acaso, em 390 px de largura. Se algo do fundo compete com o texto, remova; se o vídeo ficou "carregado", tire um efeito, não adicione outro.
+8. **A vitrine é a exceção:** o vídeo que mostra o kit pode usar tudo. Vídeo de assunto (livro, ferramenta, oferta) escolhe poucos efeitos e os usa bem.
+
 ## 1. Unidade de medida
 `u` = 1% do menor lado do quadro. Vídeo em pé 1080×1920 → u = 10,8 px. Tela 1600×1200 → u = 12 px. Todos os tamanhos abaixo estão em `u`.
 
