@@ -14,21 +14,28 @@ Brilho em camadas, faíscas, mira, HUD, grade em perspectiva, partículas, texto
 
 Foi testado de ponta a ponta em 18/10/2026: numa conversa nova do Claude Code com o Opus 5.5, só com os arquivos deste kit e um pedido de poucas linhas, saiu um vídeo de barbearia (fictícia) em 9 min 46 s, em uma tentativa, sem retoque.
 
-## Como usar (3 passos)
+## Como usar (3 passos, só colando pedidos na sua IA)
 
-1. **Instale o necessário** (uma vez):
-   - [Claude Code](https://claude.com/claude-code) (precisa de um plano pago do Claude) ou outra IA de código que rode comandos no seu computador;
-   - Node 22 ou mais novo e o `ffmpeg`;
-   - o HyperFrames: `claude plugin marketplace add heygen-com/hyperframes` e `claude plugin install hyperframes@hyperframes`.
-2. **Baixe este kit** e prepare a pasta do seu vídeo:
-   ```bash
-   git clone https://github.com/ivanlessa1986/Pixelcorp-motion.git
-   bash Pixelcorp-motion/kit/baixar-gsap.sh        # baixa o GSAP (biblioteca de animação, gratuita)
-   mkdir meu-video && cd meu-video
-   cp ../Pixelcorp-motion/kit/kit-motion.md ../Pixelcorp-motion/kit/kit-fx.js .
-   ```
-3. **Abra a sua IA nessa pasta e cole um pedido** (veja [`kit/PEDIDOS.md`](kit/PEDIDOS.md), troque o que está entre [colchetes]). Exemplo:
-   > Leia o arquivo kit-motion.md desta pasta antes de começar e use o kit-fx.js que está junto. Crie um vídeo vertical de 15 segundos para o meu negócio, [NOME], com a oferta: [OFERTA]. Use o tema escuro neon. Grave em MP4.
+Você precisa de **uma IA que trabalha no seu computador**, como o [Claude Code](https://claude.com/claude-code) (plano pago do Claude). O resto a sua IA instala: você só cola três pedidos e aprova o que ela pedir.
+
+**1. Peça para a sua IA instalar o necessário (uma vez):**
+> Quero criar vídeos animados com o HyperFrames. Verifique se o meu computador já tem o Node (versão 22 ou mais nova), o ffmpeg e o HyperFrames, e instale o que faltar, passo a passo, explicando tudo em português simples. Pergunte antes de mudar qualquer coisa.
+
+**2. Peça para ela baixar o kit deste repositório:**
+> Baixe o Kit Motion da PixelCorp do repositório https://github.com/ivanlessa1986/Pixelcorp-motion (pode clonar ou baixar o ZIP). Crie uma pasta nova chamada meu-video, rode o arquivo kit/baixar-gsap.sh e copie para essa pasta os arquivos kit/kit-motion.md e kit/kit-fx.js. Depois me diga que está tudo pronto.
+
+**3. Cole o pedido do vídeo** (veja outros em [`kit/PEDIDOS.md`](kit/PEDIDOS.md); troque o que está entre [colchetes]):
+> Leia o arquivo kit-motion.md desta pasta antes de começar e use o kit-fx.js que está junto. Crie um vídeo vertical de 15 segundos para o meu negócio, [NOME], com a oferta: [OFERTA]. Use o tema escuro neon. Grave em MP4 e me mostre o vídeo em quadros para eu conferir.
+
+<details><summary>Para quem prefere o terminal (opcional)</summary>
+
+```bash
+git clone https://github.com/ivanlessa1986/Pixelcorp-motion.git
+bash Pixelcorp-motion/kit/baixar-gsap.sh        # baixa o GSAP (biblioteca de animação, gratuita)
+mkdir meu-video && cd meu-video
+cp ../Pixelcorp-motion/kit/kit-motion.md ../Pixelcorp-motion/kit/kit-fx.js .
+```
+</details>
 
 É um **pedido**, não uma skill nem um programa: a IA lê o guia (`kit-motion.md`), aprende os valores certos (tipografia, grade, ritmo, curvas, paleta, brilho) e escreve a animação. Sem o guia, ela entrega o básico; com ele, o vídeo sai com cara de profissional.
 
