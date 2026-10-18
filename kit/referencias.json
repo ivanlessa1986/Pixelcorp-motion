@@ -1,0 +1,73 @@
+{
+  "_nota": "Referências do Motion Kit PixelCorp (18/10/2026). Fonte única dos valores usados por kit.mjs e explicados em REFERENCIAS.md. Medidas em 'u' = 1% do menor lado do palco (tela 1600x1200 -> u=12 px; vídeo 1080x1920 -> u=10,8 px).",
+  "versao": "2.0.0",
+  "fontes": {
+    "impacto": { "familia": "Archivo Black", "arquivo": "archivoblack.woff2", "peso": 400, "uso": "palavra forte gigante, número gigante" },
+    "display": { "familia": "Space Grotesk", "arquivo": "spacegrotesk-var-latin.woff2", "peso": "300 700", "uso": "títulos, cartões, legenda cinética (700)" },
+    "texto": { "familia": "Manrope", "arquivo": "manrope-var-latin.woff2", "peso": "200 800", "uso": "frases de apoio, chips, corpo" },
+    "mono": { "familia": "JetBrains Mono", "arquivo": "jbmono-800.woff2", "arquivo2": "jbmono-500.woff2", "peso": "500 800", "uso": "rótulos de HUD, números de tempo, código, medidas" }
+  },
+  "escala_tipografica_u": {
+    "gigante": { "tam": 22, "familia": "impacto", "entrelinha": 0.9, "espaco": "-0.03em", "max_palavras": 2 },
+    "numero": { "tam": 30, "familia": "impacto", "entrelinha": 0.85, "espaco": "-0.04em", "tabular": true },
+    "titulo": { "tam": 11, "familia": "display", "peso": 700, "entrelinha": 1.0, "espaco": "-0.02em" },
+    "legenda": { "tam": 8, "familia": "display", "peso": 700, "entrelinha": 1.08, "espaco": "-0.01em", "max_linhas": 2 },
+    "apoio": { "tam": 5, "familia": "texto", "peso": 600, "entrelinha": 1.2 },
+    "chip": { "tam": 4.2, "familia": "texto", "peso": 700 },
+    "rotulo": { "tam": 2.2, "familia": "mono", "peso": 800, "espaco": "0.14em", "caixa": "alta" },
+    "micro": { "tam": 1.7, "familia": "mono", "peso": 500, "espaco": "0.1em", "caixa": "alta" },
+    "regra_legibilidade": "No celular (1080 px de largura) nenhuma palavra que precisa ser lida fica abaixo de 40 px reais. Dentro de um monitor filmado a tela ocupa ~0,55 da largura: use legenda >= 8u e apoio >= 5u."
+  },
+  "grade": {
+    "margem_u": 6,
+    "colunas": 6,
+    "calha_u": 2,
+    "linha_base_u": 1,
+    "palco_tela": { "w": 1600, "h": 1200, "u": 12, "zona_legenda": [0.07, 0.30], "zona_heroi": [0.30, 0.78], "zona_hud": "4u das bordas" },
+    "video_9x16": { "w": 1080, "h": 1920, "u": 10.8, "topo_ui_px": 130, "marca_topo_px": 330, "base_ui_px": 250, "zona_legenda_px": [360, 700], "zona_heroi_px": [700, 1400], "regra": "nada que precise ser lido acima de 330 px (selo, faixa e prova moram lá) nem abaixo de 1670 px (interface do Reels)" }
+  },
+  "ritmo": {
+    "palavra_s": { "min": 0.22, "padrao": 0.32, "max": 0.35, "nota": "fala natural do Ivan ~2,9 a 3,1 palavras/s" },
+    "palavra_entra_s": 0.16,
+    "antecipa_palavra_s": 0.03,
+    "regra_sincronia": "a palavra aparece no instante em que é dita (início da palavra no transcript), nunca antes de 0,03 s nem depois de 0,05 s",
+    "cena_min_s": 1.8,
+    "troca_max_s": 2.5,
+    "leitura_s": "0,30 s por palavra + 1,0 s (frase que precisa ser lida inteira, ex.: pedido >= 3,5 s parado)",
+    "pausa_antes_impacto_s": 0.12,
+    "hold_final_cena_s": 0.3,
+    "cortes": "corte na batida da música ou no fim de palavra; impacto sonoro no frame do corte; nunca 2 transições pesadas seguidas (alternar pesada, leve, corte seco)"
+  },
+  "easing": {
+    "entrada_slam": { "gsap": "expo.out", "dur": 0.45, "uso": "palavra gigante, número" },
+    "entrada_ui": { "gsap": "power3.out", "dur": 0.35, "uso": "cartão, chip, painel" },
+    "entrada_pop": { "gsap": "back.out(1.7)", "dur": 0.36, "uso": "selo, ícone, botão" },
+    "entrada_mola": { "gsap": "elastic.out(1, 0.55)", "dur": 0.7, "uso": "só 1 por cena, objeto que 'cai' no lugar" },
+    "saida": { "gsap": "power2.in", "dur": 0.18, "regra": "saída = 40 a 60% da entrada" },
+    "camera": { "gsap": "power3.inOut", "dur": 0.8, "uso": "zoom/pan da câmera" },
+    "chicote": { "sai": "power4.in 0.16", "entra": "expo.out 0.32" },
+    "linear": { "gsap": "none", "uso": "contador, rolagem, varredura" },
+    "ambiente": { "gsap": "sine.inOut", "uso": "respiração, deriva, brilho pulsando" }
+  },
+  "temas": {
+    "neon": { "nome": "Escuro neon", "fundo": "#05080d", "fundo2": "#0a1220", "superficie": "#0e1726", "texto": "#eaf9ff", "mudo": "#7f93a8", "destaque": "#38e1ff", "alerta": "#ff4d6d", "ok": "#3dffa8" },
+    "ouro": { "nome": "Escuro ouro", "fundo": "#080604", "fundo2": "#14100a", "superficie": "#1c160d", "texto": "#fff5e3", "mudo": "#a8957a", "destaque": "#ffb341", "alerta": "#ff5a4f", "ok": "#9cf27a" },
+    "magenta": { "nome": "Escuro magenta", "fundo": "#07030c", "fundo2": "#170828", "superficie": "#1e0b33", "texto": "#fdeeff", "mudo": "#9d88b0", "destaque": "#ff3fd8", "alerta": "#ffcc33", "ok": "#4dffc3" },
+    "claro": { "nome": "Claro", "fundo": "#f2f0ea", "fundo2": "#e6e3da", "superficie": "#ffffff", "texto": "#0f1419", "mudo": "#5d6670", "destaque": "#2457ff", "alerta": "#e0342f", "ok": "#0f9d58" }
+  },
+  "brilho": {
+    "camadas_em": [[0.01, "#fff", 0.9], [0.04, "destaque", 1.0], [0.12, "destaque", 0.85], [0.3, "destaque", 0.55], [0.6, "destaque", 0.28]],
+    "nucleo": "o centro da letra fica quase branco (mistura 70% branco + 30% destaque): é o que faz parecer luz e não tinta",
+    "niveis": { "suave": 0.5, "padrao": 1.0, "forte": 1.5 },
+    "tema_claro": "no tema claro o brilho vira sombra colorida suave (2 camadas, 0.06em e 0.2em, 35%) e nada de branco no núcleo",
+    "pos_filmagem": "bloom real em 2 passes no ffmpeg (filmar.mjs): realces acima de 55% -> desfoque 12 px + desfoque largo 1/4 de resolução, somados em modo tela"
+  },
+  "camera_real": {
+    "tremor": "x/y ±3 px, rotação ±0,12° em ciclos de 2,6 s (sine.inOut) + microtremor de 1 px a cada 0,5 s",
+    "reflexo": "a própria foto da mesa por cima da tela em modo 'screen' a 45% (traz o reflexo real do vidro)",
+    "moire": "grade de subpixels RGB de 3 px na tela + projeção em perspectiva = ondas de moiré naturais (sem desenhar)",
+    "luz_na_mesa": "cor média da tela, borrada, derramada sobre teclado e mesa (modo 'screen', 35 a 55%)",
+    "granulado": "ruído temporal 6 + textura de grão 14% em 'screen'",
+    "vinheta": "radial 45% -> 100%, até 55% de preto"
+  }
+}
