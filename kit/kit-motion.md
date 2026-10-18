@@ -24,6 +24,8 @@ O kit tem muitos efeitos, e **nenhum vídeo usa todos**. Cada efeito precisa de 
 6. **Transições:** variar, mas transição de impacto só nas viradas (no máximo 1 a cada 6 a 8 s). Entre cenas de leitura, corte simples ou fade curto.
 7. **Teste de legibilidade antes de entregar:** pause em 5 quadros ao acaso, em 390 px de largura. Se algo do fundo compete com o texto, remova; se o vídeo ficou "carregado", tire um efeito, não adicione outro.
 8. **A vitrine é a exceção:** o vídeo que mostra o kit pode usar tudo. Vídeo de assunto (livro, ferramenta, oferta) escolhe poucos efeitos e os usa bem.
+9. **Tempo medido é resultado, não cronômetro:** mostre o número final ("1 MIN 05 S") entrando de uma vez; nada de relógio correndo nem barra enchendo (repete a barra do topo).
+10. **Palavra-isca no fecho desde o começo da cena** (até 0,5 s), não no fim. Entre cenas de leitura, fade de 0,25 s.
 
 ## 1. Unidade de medida
 `u` = 1% do menor lado do quadro. Vídeo em pé 1080×1920 → u = 10,8 px. Tela 1600×1200 → u = 12 px. Todos os tamanhos abaixo estão em `u`.
