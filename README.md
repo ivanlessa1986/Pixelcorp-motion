@@ -1,8 +1,8 @@
 # PixelCorp Motion
 
-**Kit livre para a sua IA criar vídeos animados com efeitos de motion, só com um pedido em português.**
+**Kit Motion da PixelCorp: o mesmo kit de animação que usamos nos vídeos do nosso canal e nas nossas divulgações, de graça para você.** Sem imagens, sem programa de edição: só a sua IA, com um pedido em português.
 
-Brilho em camadas, faíscas, mira, HUD, grade em perspectiva, partículas, texto 3D, transições que distorcem a imagem de verdade (estilhaço, túnel, glitch, chicote, derreter, inundar) e cenas prontas. Tudo escrito em código (HTML, CSS e JavaScript) para o [HyperFrames](https://github.com/heygen-com/hyperframes), sem programa de edição pago e sem custo por vídeo.
+Brilho em camadas, faíscas, mira, HUD, grade em perspectiva, partículas, texto 3D, transições que distorcem a imagem de verdade (estilhaço, túnel, glitch, chicote, derreter, inundar) e cenas prontas. Tudo escrito em código (HTML, CSS e JavaScript) para o [HyperFrames](https://github.com/heygen-com/hyperframes), sem custo por vídeo.
 
 ![Efeitos](docs/imagens/efeitos.jpg)
 
@@ -64,7 +64,7 @@ Cole na mesma conversa, por exemplo: "deixe as letras maiores e o vídeo 2 segun
 
 ## Licença
 
-[MIT](LICENSE): uso livre, inclusive comercial, com a menção ao autor. As fontes em `kit/fontes/` seguem a licença de cada autor (ver [`kit/fontes/LICENCAS.md`](kit/fontes/LICENCAS.md)). O GSAP não é redistribuído aqui: o script `kit/baixar-gsap.sh` baixa do jsDelivr e vale a [licença do próprio GSAP](https://gsap.com/standard-license).
+[MIT](LICENSE): de graça para você usar, inclusive comercialmente, com a menção ao autor. As fontes em `kit/fontes/` seguem a licença de cada autor (ver [`kit/fontes/LICENCAS.md`](kit/fontes/LICENCAS.md)). O GSAP não é redistribuído aqui: o script `kit/baixar-gsap.sh` baixa do jsDelivr e vale a [licença do próprio GSAP](https://gsap.com/standard-license).
 
 ## Quem fez
 
